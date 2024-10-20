@@ -1,7 +1,7 @@
-
-CH7/VHDL/build/
-CH8/VHDL/build/
-CH10/IP/
-CH10/VHDL/build/
-CH10/VHDL/sim/
-CH10/VHDL/temp/
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.srcs/
+*.ioplanning/
+*.ip_user_files/
