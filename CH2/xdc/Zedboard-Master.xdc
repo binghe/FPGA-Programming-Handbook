@@ -236,7 +236,7 @@ set_property -dict {PACKAGE_PIN U21 IOSTANDARD LVCMOS33} [get_ports { LED[3] }]
 ## ---------------------------------------------------------------------------- 
 set_property -dict {PACKAGE_PIN F22 IOSTANDARD LVCMOS33} [get_ports { SW[0] }]
 set_property -dict {PACKAGE_PIN G22 IOSTANDARD LVCMOS33} [get_ports { SW[1] }]
-#set_property PACKAGE_PIN H22 [get_ports {SW2}];  # "SW2"
+set_property -dict {PACKAGE_PIN H22 IOSTANDARD LVCMOS33} [get_ports { SW[2] }]
 #set_property PACKAGE_PIN F21 [get_ports {SW3}];  # "SW3"
 #set_property PACKAGE_PIN H19 [get_ports {SW4}];  # "SW4"
 #set_property PACKAGE_PIN H18 [get_ports {SW5}];  # "SW5"
@@ -359,17 +359,17 @@ set_property -dict {PACKAGE_PIN G22 IOSTANDARD LVCMOS33} [get_ports { SW[1] }]
 # ---------------------------------------------------------------------------- 
 
 # Note that the bank voltage for IO Bank 33 is fixed to 3.3V on ZedBoard. 
-set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
+#set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
 
 # Set the bank voltage for IO Bank 34 to 1.8V by default.
 # set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 34]];
 # set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 34]];
-set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
+#set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 
 # Set the bank voltage for IO Bank 35 to 1.8V by default.
 # set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 35]];
 # set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 35]];
-set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
+#set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
 
 # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard. 
-set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];
+#set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];

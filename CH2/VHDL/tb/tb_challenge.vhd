@@ -16,7 +16,7 @@ architecture test of tb_challenge is
 
   -- Define the signals
   signal SW  : std_logic_vector(2 downto 0);
-  signal LED : std_logic_vector(1 downto 0);
+  signal LED : std_logic_vector(3 downto 0);
 
 begin
 
@@ -30,6 +30,7 @@ begin
   -- Stimulus
   -- Equivalent to the initial block in SV
   initial : process
+  
   begin
     SW <= "000";
     for i in 0 to 7 loop
@@ -43,6 +44,7 @@ begin
 
   -- Checking
   checking : process
+    variable Cout : std_logic_vector(1 downto 0);
     variable SUM : unsigned(1 downto 0);
   begin
     wait until SW'event;
@@ -51,7 +53,9 @@ begin
       SUM := SUM + unsigned(unsigned'("0") & SW(i));
     end loop;
     wait for 1 ps;                      -- wait for LED to update
-    assert SUM = unsigned(LED) report "FAIL: Addition mismatch" severity failure;
+    Cout(0) := LED(2);
+    Cout(1) := LED(3);
+    assert SUM = unsigned(Cout) report "FAIL: Addition mismatch" severity failure;
   end process checking;
 
 end architecture test;
