@@ -21,13 +21,13 @@ begin
 
   LED(0) <= not SW(0);
 
-  LED(1) <= SW(1) and SW(0);
-  --LED(1)  <= and(SW); -- VHDL 2008
+  --LED(1) <= SW(1) and SW(0);
+  LED(1) <= and(SW); -- VHDL 2008
 
-  LED(2) <= SW(1) or SW(0);
-  --LED(2)  <= or(SW); -- VHDL 2008
+  --LED(2) <= SW(1) or SW(0);
+  LED(2) <= or(SW); -- VHDL 2008
 
-  LED(3) <= SW(1) xor SW(0);
-  --LED(3)  <= xor(SW); -- VHDL 2008
+  --LED(3) <= SW(1) xor SW(0);
+  LED(3) <= xor(SW); -- VHDL 2008
 
 end architecture rtl;
