@@ -14,14 +14,14 @@ entity tb is
   generic(
   SELECTOR    : string;
   UNIQUE_CASE : string;
-  TEST_CASE   : string
+  TEST_CASE   : string;
+  BITS        : integer := 16
 );
 end entity tb;
 
 architecture tb of tb is
 
   --constant SELECTOR : string  := "UP_FOR"; -- or "DOWN_FOR"
-  constant BITS     : integer := 16;
   constant NUM_TEST : integer := 1000;
 
   -- Count number of bits set in the SW vector
@@ -130,21 +130,21 @@ begin
       end if;
     end if;
     if BTNL then
-      sw_add := resize(signed(SW(15 downto 8)), sw_add'length) + resize(signed(SW(7 downto 0)), sw_add'length);
+      sw_add := resize(signed(SW(7 downto 4)), sw_add'length) + resize(signed(SW(3 downto 0)), sw_add'length);
       if sw_add /= signed(LED) then
-        report "FAIL: LED != sum of SW[15:8] + SW[7:0] " & to_string(sw_add) & " != " & to_string(signed(LED)) severity failure;
+        report "FAIL: LED != sum of SW[7:4] + SW[3:0] " & to_string(sw_add) & " != " & to_string(signed(LED)) severity failure;
       end if;
     end if;
     if BTNR then
-      sw_sub := resize(signed(SW(15 downto 8)), sw_sub'length) - resize(signed(SW(7 downto 0)), sw_sub'length);
+      sw_sub := resize(signed(SW(7 downto 4)), sw_sub'length) - resize(signed(SW(3 downto 0)), sw_sub'length);
       if sw_sub /= signed(LED) then
-        report "FAIL: LED != diff of SW[15:8] - SW[7:0] " & to_string(sw_sub) & " != " & to_string(signed(LED)) severity failure;
+        report "FAIL: LED != diff of SW[7:4] - SW[3:0] " & to_string(sw_sub) & " != " & to_string(signed(LED)) severity failure;
       end if;
     end if;
     if BTNC then
-      sw_mul := signed(SW(15 downto 8)) * signed(SW(7 downto 0));
+      sw_mul := signed(SW(7 downto 4)) * signed(SW(3 downto 0));
       if sw_mul /= signed(LED) then
-        report "FAIL: LED != prod of SW[15:8] * SW[7:0]" severity failure;
+        report "FAIL: LED != prod of SW[7:4] * SW[3:0]" severity failure;
       end if;
     end if;
   end process checker;

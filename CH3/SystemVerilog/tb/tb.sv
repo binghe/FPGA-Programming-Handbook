@@ -9,7 +9,7 @@ module tb;
   parameter  SELECTOR     = "UP_FOR";
   parameter  UNIQUE_CASE  = "FALSE";
   parameter  TEST_CASE    = "ALL";
-  localparam BITS         = 16;
+  parameter  BITS         = 16;
   localparam NUM_TEST     = 1000;
 
   logic [BITS-1:0]       SW;
