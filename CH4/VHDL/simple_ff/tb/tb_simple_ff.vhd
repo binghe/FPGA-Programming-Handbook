@@ -4,12 +4,15 @@
 -- ------------------------------------
 -- Author : Frank Bruno
 library IEEE;
+
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.math_real.all;
 use std.env.finish;
+
 entity tb_simple_ff is
 end entity tb_simple_ff;
+
 architecture tb of tb_simple_ff is
   signal CK : std_logic := '0';
   signal CE : std_logic;
