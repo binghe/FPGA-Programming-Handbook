@@ -173,7 +173,7 @@ create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {CK
 # ----------------------------------------------------------------------------
 # User LEDs - Bank 33
 # ---------------------------------------------------------------------------- 
-set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33} [get_ports { LED[0] }]
+set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33} [get_ports { Q }]; # LED[0]
 #set_property -dict {PACKAGE_PIN T21 IOSTANDARD LVCMOS33} [get_ports { LED[1] }]
 #set_property -dict {PACKAGE_PIN U22 IOSTANDARD LVCMOS33} [get_ports { LED[2] }]
 #set_property -dict {PACKAGE_PIN U21 IOSTANDARD LVCMOS33} [get_ports { LED[3] }]
@@ -235,7 +235,7 @@ set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33} [get_ports { LED[0] }]
 ## ----------------------------------------------------------------------------
 ## User DIP Switches - Bank 35
 ## ---------------------------------------------------------------------------- 
-set_property -dict {PACKAGE_PIN F22 IOSTANDARD LVCMOS33} [get_ports { SW[0] }]
+set_property -dict {PACKAGE_PIN F22 IOSTANDARD LVCMOS33} [get_ports { D }]; # SW[0]
 #set_property -dict {PACKAGE_PIN G22 IOSTANDARD LVCMOS33} [get_ports { SW[1] }]
 #set_property -dict {PACKAGE_PIN H22 IOSTANDARD LVCMOS33} [get_ports { SW[2] }]
 #set_property -dict {PACKAGE_PIN F21 IOSTANDARD LVCMOS33} [get_ports { SW[3] }]

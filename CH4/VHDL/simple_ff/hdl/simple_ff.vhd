@@ -24,11 +24,11 @@ begin
 
   FF : process(CK)
   begin
-    if CK'event and CK = '1' then
-      reg <= D;
-    end if;
+    --if CK'event and CK = '1' then
+    --  reg <= D;
+    --end if;
     -- The following is equivalent:
-    -- if rising_edge(CK) then reg <= D; end if;
+    if rising_edge(CK) then reg <= D; end if;
   end process FF;
 
   Q <= reg;
