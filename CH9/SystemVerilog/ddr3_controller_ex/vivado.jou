@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Nov 25 10:10:46 2024
+# Process ID         : 7676
+# Current directory  : f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex
+# Command line       : vivado.exe -notrace -source f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/build/ddr2.gen/sources_1/ip/ddr3_controller/ddr3_controller_ex.tcl
+# Log file           : f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex/vivado.log
+# Journal file       : f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex\vivado.jou
+# Running On         : binghe-p70
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Xeon(R) CPU E3-1505M v5 @ 2.80GHz
+# CPU Frequency      : 2808 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 68530 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 78731 MB
+# Available Virtual  : 61904 MB
+#-----------------------------------------------------------
+start_gui
+source f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/build/ddr2.gen/sources_1/ip/ddr3_controller/ddr3_controller_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_simulation
+source sim_tb_top.tcl
