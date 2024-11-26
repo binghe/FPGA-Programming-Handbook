@@ -26,3 +26,8 @@ source f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/build/ddr2.gen/sources_1/ip
 update_compile_order -fileset sources_1
 launch_simulation
 source sim_tb_top.tcl
+save_wave_config {f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex/sim_tb_top_behav.wcfg}
+add_files -fileset sim_1 -norecurse f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex/sim_tb_top_behav.wcfg
+set_property xsim.view f:/Xilinx/Handbook-Genesys2/CH9/SystemVerilog/ddr3_controller_ex/sim_tb_top_behav.wcfg [get_filesets sim_1]
+close_sim
+close_project
